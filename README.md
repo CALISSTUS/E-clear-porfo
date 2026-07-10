@@ -1,4 +1,4 @@
-# Vibe Coding Developer Portfolio
+# E-clear-porfo — GABRIEL TABLET Portfolio
 
 A premium, futuristic full-stack developer portfolio built with Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP, and Swiper.js.
 
@@ -23,6 +23,12 @@ Edit these files to personalize the portfolio:
 | `public/images/` | Profile photo, project screenshots |
 | `public/cv/` | Your resume PDF |
 
+## Contact Form Email Setup
+
+1. Get a free access key at [web3forms.com](https://web3forms.com) using `gabrielgabriel9727@gmail.com`
+2. Create `.env.local` with `WEB3FORMS_ACCESS_KEY=your_key`
+3. Add the same variable in Vercel project settings when deploying
+
 ## Tech Stack
 
 - **Next.js 15+** (App Router)
@@ -42,7 +48,7 @@ Edit these files to personalize the portfolio:
 - Hero with autoplay coding video
 - Typing effect animation
 - Project category filters
-- Contact form with validation
+- Contact form with Gmail delivery
 - SEO optimized (metadata, sitemap, JSON-LD)
 - Accessibility compliant (skip link, ARIA, focus states)
 - Fully responsive
