@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="og" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050508"/>
+      <stop offset="50%" style="stop-color:#6C3BFF"/>
+      <stop offset="100%" style="stop-color:#FF4FD8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og)"/>
+  <text x="600" y="280" text-anchor="middle" fill="#fff" font-family="system-ui,sans-serif" font-size="52" font-weight="700">GABRIEL TABLET</text>
+  <text x="600" y="350" text-anchor="middle" fill="#ffffff99" font-family="system-ui,sans-serif" font-size="28">Vibe Coding Full Stack Developer</text>
+  <text x="600" y="420" text-anchor="middle" fill="#FF4FD8" font-family="monospace" font-size="24">&lt;/&gt; Building Digital Experiences</text>
+</svg>

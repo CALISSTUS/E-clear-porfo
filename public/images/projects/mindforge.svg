@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs><linearGradient id="e" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1a0a2e"/><stop offset="100%" style="stop-color:#FF4FD8"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#e)"/>
+  <polygon points="400,100 500,200 400,300 300,200" fill="none" stroke="#FF4FD8" stroke-width="3"/>
+  <circle cx="400" cy="200" r="30" fill="#6C3BFF" opacity="0.6"/>
+  <rect x="150" y="340" width="500" height="60" rx="8" fill="#0d0d14" stroke="#6C3BFF" stroke-width="2"/>
+  <text x="400" y="460" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="28" font-weight="600">MindForge AI Studio</text>
+</svg>

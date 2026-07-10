@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050508"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <rect x="200" y="150" width="600" height="400" rx="8" fill="#0d1117" stroke="#6C3BFF" stroke-width="2" opacity="0.8"/>
+  <rect x="220" y="180" width="560" height="30" fill="#6C3BFF" opacity="0.3"/>
+  <text x="250" y="280" fill="#6C3BFF" font-family="monospace" font-size="24">const build = () =&gt; magic;</text>
+  <text x="250" y="320" fill="#FF4FD8" font-family="monospace" font-size="24">export default experience;</text>
+</svg>

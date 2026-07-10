@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs><linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0f0a1a"/><stop offset="100%" style="stop-color:#6C3BFF"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#a)"/>
+  <rect x="60" y="80" width="680" height="360" rx="12" fill="#0d0d14" stroke="#6C3BFF" stroke-width="2"/>
+  <rect x="100" y="140" width="200" height="120" rx="8" fill="#6C3BFF" opacity="0.2"/>
+  <rect x="320" y="140" width="380" height="40" rx="6" fill="#FF4FD8" opacity="0.3"/>
+  <rect x="320" y="200" width="300" height="60" rx="6" fill="#3b82f6" opacity="0.2"/>
+  <circle cx="200" cy="380" r="40" fill="none" stroke="#FF4FD8" stroke-width="3"/>
+  <text x="400" y="460" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="28" font-weight="600">Nexus AI Dashboard</text>
+</svg>
