@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import gsap from "gsap";
@@ -121,12 +122,14 @@ export function Skills() {
         <ScrollReveal delay={0.3}>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {skills.map((skill) => (
-              <span
+              <Link
                 key={skill.name}
-                className="px-4 py-2 rounded-full glass text-sm text-white/70 hover:text-white hover:border-purple-deep/40 transition-all duration-300 cursor-default"
+                href="/contact"
+                prefetch
+                className="px-4 py-2 rounded-full glass text-sm text-white/70 hover:text-white hover:border-purple-deep/50 hover:glow-purple transition-all duration-150 cursor-pointer active:scale-95"
               >
                 {skill.name}
-              </span>
+              </Link>
             ))}
           </div>
         </ScrollReveal>

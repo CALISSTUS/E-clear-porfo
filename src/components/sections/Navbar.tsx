@@ -1,24 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navItems, siteConfig } from "@/data/content";
-import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/cn";
 
-const sectionIds = navItems.map((item) => item.href.replace("#", ""));
-
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const activeSection = useActiveSection(sectionIds);
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setIsMobileOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (isMobileOpen) {
@@ -31,13 +34,18 @@ export function Navbar() {
     };
   }, [isMobileOpen]);
 
-  const handleNavClick = () => setIsMobileOpen(false);
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled ? "glass-strong py-3 shadow-lg shadow-purple-deep/5" : "py-5 bg-transparent"
+        isScrolled || pathname !== "/"
+          ? "glass-strong py-3 shadow-lg shadow-purple-deep/5"
+          : "py-5 bg-transparent"
       )}
       role="banner"
     >
@@ -45,8 +53,9 @@ export function Navbar() {
         className="max-w-7xl mx-auto px-6 flex items-center justify-between"
         aria-label="Main navigation"
       >
-        <a
-          href="#home"
+        <Link
+          href="/"
+          prefetch
           className="text-xl font-bold gradient-text-purple tracking-tight"
           aria-label={`${siteConfig.name} - Home`}
         >
@@ -54,25 +63,23 @@ export function Navbar() {
           <span className="text-white ml-1 text-sm md:text-base tracking-wide">
             {siteConfig.name}
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-1" role="list">
           {navItems.map((item) => {
-            const id = item.href.replace("#", "");
-            const isActive = activeSection === id;
+            const active = isActive(item.href);
             return (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
+                  prefetch
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
-                    isActive
-                      ? "text-white"
-                      : "text-white/60 hover:text-white"
+                    "relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-150",
+                    active ? "text-white" : "text-white/60 hover:text-white"
                   )}
-                  aria-current={isActive ? "page" : undefined}
+                  aria-current={active ? "page" : undefined}
                 >
-                  {isActive && (
+                  {active && (
                     <motion.span
                       layoutId="nav-active"
                       className="absolute inset-0 bg-purple-deep/20 border border-purple-deep/30 rounded-full"
@@ -80,18 +87,19 @@ export function Navbar() {
                     />
                   )}
                   <span className="relative z-10">{item.label}</span>
-                </a>
+                </Link>
               </li>
             );
           })}
         </ul>
 
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white hover:shadow-[0_0_20px_rgba(108,59,255,0.4)] transition-shadow"
+        <Link
+          href="/contact"
+          prefetch
+          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white hover:shadow-[0_0_20px_rgba(108,59,255,0.4)] transition-all duration-150 active:scale-95"
         >
           Hire Me
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -113,12 +121,11 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.15 }}
           >
             <ul className="flex flex-col items-center gap-2 p-8" role="list">
               {navItems.map((item, i) => {
-                const id = item.href.replace("#", "");
-                const isActive = activeSection === id;
+                const active = isActive(item.href);
                 return (
                   <motion.li
                     key={item.href}
@@ -126,17 +133,17 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <a
+                    <Link
                       href={item.href}
-                      onClick={handleNavClick}
+                      onClick={() => setIsMobileOpen(false)}
                       className={cn(
                         "block px-6 py-3 text-lg font-medium rounded-xl transition-colors",
-                        isActive ? "text-purple-neon" : "text-white/70 hover:text-white"
+                        active ? "text-purple-neon" : "text-white/70 hover:text-white"
                       )}
-                      aria-current={isActive ? "page" : undefined}
+                      aria-current={active ? "page" : undefined}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </motion.li>
                 );
               })}
@@ -146,13 +153,13 @@ export function Navbar() {
                 transition={{ delay: navItems.length * 0.05 }}
                 className="mt-4"
               >
-                <a
-                  href="#contact"
-                  onClick={handleNavClick}
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileOpen(false)}
                   className="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white font-medium"
                 >
                   Hire Me
-                </a>
+                </Link>
               </motion.li>
             </ul>
           </motion.div>

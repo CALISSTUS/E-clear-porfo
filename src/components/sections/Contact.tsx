@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Check, Copy, Mail, Send } from "lucide-react";
 import { siteConfig, socialLinks } from "@/data/content";
@@ -46,6 +46,17 @@ export function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get("service");
+    if (service) {
+      setForm((prev) => ({
+        ...prev,
+        subject: prev.subject || `Inquiry: ${service}`,
+      }));
+    }
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

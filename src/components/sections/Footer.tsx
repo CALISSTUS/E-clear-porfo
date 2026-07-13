@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import { siteConfig, socialLinks } from "@/data/content";
-import { navItems } from "@/data/content";
+import { siteConfig, socialLinks, navItems } from "@/data/content";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -33,12 +33,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-2">
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="text-2xl font-bold gradient-text-purple inline-block mb-4"
             >
               {"</>"} {siteConfig.name}
-            </a>
+            </Link>
             <p className="text-white/50 max-w-sm leading-relaxed">
               {siteConfig.title}. Building premium digital experiences with
               modern tech and AI-powered workflows.
@@ -50,12 +50,12 @@ export function Footer() {
             <ul className="space-y-2" role="list">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="text-white/50 hover:text-purple-neon transition-colors text-sm"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

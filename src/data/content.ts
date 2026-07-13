@@ -11,7 +11,7 @@ export const siteConfig = {
   heroVideo:
     "https://videos.pexels.com/video-files/7578612/7578612-uhd_2560_1440_25fps.mp4",
   heroPoster: "/images/hero-poster.svg",
-  profileImage: "/images/profile.svg",
+  profileImage: "/RAIN.jpg",
   typingRoles: [
     "Full Stack Developer",
     "AI Engineer",
@@ -50,12 +50,12 @@ export const siteConfig = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Skills", href: "/skills" },
+  { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const socialLinks: SocialLink[] = [

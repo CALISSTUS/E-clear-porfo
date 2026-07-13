@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Download, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { siteConfig } from "@/data/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { Parallax } from "@/components/animations/Parallax";
 
@@ -71,28 +73,36 @@ export function About() {
 
               <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
                 {siteConfig.about.stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold gradient-text-purple">
+                  <Link
+                    key={stat.label}
+                    href="/projects"
+                    prefetch
+                    className="text-center group cursor-pointer hover:scale-105 transition-transform duration-150"
+                  >
+                    <div className="text-2xl md:text-3xl font-bold gradient-text-purple group-hover:text-pink-neon transition-colors duration-150">
                       {stat.value}
                     </div>
-                    <div className="text-xs md:text-sm text-white/50 mt-1">
+                    <div className="text-xs md:text-sm text-white/50 mt-1 group-hover:text-white/70 transition-colors duration-150">
                       {stat.label}
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
 
-              <div className="mt-8">
-                <motion.a
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/projects" variant="secondary" size="md">
+                  View Projects
+                </Button>
+                <Button href="/contact" size="md">
+                  Hire Me
+                </Button>
+                <a
                   href={siteConfig.cvUrl}
                   download
-                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full glass text-white font-medium hover:bg-white/10 border border-white/10 transition-all duration-300"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full glass text-white font-medium hover:bg-white/10 border border-white/10 transition-all duration-150 active:scale-[0.97] cursor-pointer"
                 >
-                  <Download className="w-4 h-4" aria-hidden />
                   Download CV
-                </motion.a>
+                </a>
               </div>
             </GlassCard>
           </ScrollReveal>

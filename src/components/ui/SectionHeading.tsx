@@ -28,7 +28,7 @@ export function SectionHeading({
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.35 }}
     >
       <span className="inline-block text-sm font-semibold uppercase tracking-[0.2em] text-purple-neon mb-3">
         {label}

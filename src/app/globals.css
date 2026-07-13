@@ -172,6 +172,30 @@ body {
   outline-offset: 3px;
 }
 
+/* Fast page enter */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-in {
+  animation: page-in 0.2s ease-out forwards;
+}
+
+/* Interactive feel */
+a,
+button,
+[role="button"],
+label[for] {
+  cursor: pointer;
+}
+
 /* Screen reader only */
 .sr-only {
   position: absolute;
