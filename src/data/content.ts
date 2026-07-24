@@ -1,9 +1,9 @@
 import type { NavItem, Service, SocialLink } from "@/types";
 
 export const siteConfig = {
-  name: "GABRIEL TABLET",
-  title: "Vibe Coding Full Stack Developer",
-  tagline: "Building Digital Experiences That Matter",
+  name: "CALISSTUS",
+  title: "Creative Developer & Full-Stack Engineer",
+  tagline: "Building fast, beautiful, scalable digital experiences",
   email: "gabrielgabriel9727@gmail.com",
   location: "Remote · Worldwide",
   availability: "Open to freelance & full-time",
@@ -13,38 +13,39 @@ export const siteConfig = {
   heroPoster: "/images/hero-poster.svg",
   profileImage: "/RAIN.jpg",
   typingRoles: [
-    "Full Stack Developer",
-    "AI Engineer",
-    "UI/UX Enthusiast",
+    "Creative Developer",
+    "Full-Stack Engineer",
+    "UI/UX Designer",
     "Problem Solver",
   ],
   about: {
-    headline: "Crafting the future with code, AI, and intentional design.",
+    headline: "Crafting Modern Digital Experiences",
     paragraphs: [
-      "I'm a Vibe Coding Full Stack Developer who builds fast, accessible, and visually striking web applications. I combine modern frameworks with AI-assisted workflows to ship production-ready products at exceptional velocity.",
-      "From responsive interfaces to scalable backends and Supabase-powered architectures, I focus on clean code, performance, and experiences that feel premium from the first interaction.",
-      "When I'm not shipping features, I'm exploring new AI tools, refining UI systems, and pushing the boundaries of what solo developers can build with Cursor, Lovable, and a relentless builder mindset.",
+      "Hello, I'm Gabriel Gabriel, professionally known as CALISSTUS. I am a passionate Full-Stack Developer who specializes in building beautiful, modern, scalable, and high-performance web applications.",
+      "I enjoy solving real-world problems with technology, creating immersive user experiences, and continuously learning modern tools and frameworks to deliver exceptional results.",
+      "From responsive interfaces to scalable backends, I focus on clean code, performance optimization, and creating premium user experiences that make a lasting impact.",
     ],
     stats: [
-      { label: "Projects Delivered", value: "24+" },
-      { label: "Years Coding", value: "3+" },
-      { label: "Client Satisfaction", value: "100%" },
+      { label: "Projects Completed", value: "15+" },
+      { label: "Years of Experience", value: "5+" },
+      { label: "Happy Clients", value: "20+" },
+      { label: "Hours Coded", value: "2k+" },
     ],
   },
   seo: {
-    title: "GABRIEL TABLET | Vibe Coding Full Stack Developer",
+    title: "CALISSTUS | Creative Developer & Full-Stack Engineer",
     description:
-      "Premium portfolio of GABRIEL TABLET, a Vibe Coding Full Stack Developer specializing in Next.js, React, TypeScript, AI-powered apps, and futuristic UI/UX.",
+      "Premium portfolio of CALISSTUS, a Creative Developer and Full-Stack Engineer specializing in Next.js, React, TypeScript, Three.js, and building exceptional digital experiences.",
     keywords: [
       "Full Stack Developer",
-      "Vibe Coding",
+      "Creative Developer",
       "Next.js Developer",
       "React Developer",
-      "AI Engineer",
+      "Three.js",
       "TypeScript",
       "Portfolio",
     ],
-    url: "https://gabrieldev.com",
+    url: "https://calisstus.dev",
     ogImage: "/images/og-image.svg",
   },
 };
@@ -53,8 +54,11 @@ export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Skills", href: "/skills" },
-  { label: "Projects", href: "/projects" },
+  { label: "Experience", href: "/experience" },
   { label: "Services", href: "/services" },
+  { label: "Projects", href: "/projects" },
+  { label: "Articles", href: "/articles" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -88,52 +92,59 @@ export const socialLinks: SocialLink[] = [
 
 export const services: Service[] = [
   {
-    id: "mobile-app",
-    title: "MOBILE APPLICATION",
+    id: "frontend-dev",
+    title: "Frontend Development",
     description:
-      "iOS and Android mobile applications with intuitive UI, offline support, push notifications, and seamless performance on every device.",
-    icon: "tablet-smartphone",
+      "Building responsive, interactive, and performant user interfaces with React, Next.js, and modern CSS frameworks.",
+    icon: "layout",
   },
   {
-    id: "app-dev",
-    title: "APP DEVELOPMENT",
+    id: "backend-dev",
+    title: "Backend Development",
     description:
-      "Native and cross-platform mobile apps — from concept to App Store and Play Store deployment.",
-    icon: "smartphone",
+      "Creating robust server-side applications with Node.js, Express, and scalable database architectures.",
+    icon: "server",
   },
   {
-    id: "web-dev",
-    title: "Web Development",
+    id: "fullstack-dev",
+    title: "Full-Stack Web Development",
     description:
-      "High-performance, responsive websites and web apps built with Next.js, React, and Tailwind CSS — optimized for speed and conversion.",
-    icon: "code",
+      "End-to-end web application development from concept to deployment with modern technologies and best practices.",
+    icon: "layers",
   },
   {
-    id: "ai-apps",
-    title: "AI-Powered Applications",
-    description:
-      "Intelligent products that integrate AI workflows, automation, and modern tooling to deliver smarter user experiences.",
-    icon: "sparkles",
-  },
-  {
-    id: "ui-ux",
+    id: "ui-ux-design",
     title: "UI/UX Design",
     description:
-      "Futuristic, glassmorphic interfaces with micro-interactions, accessibility-first patterns, and premium visual polish.",
+      "Designing intuitive and beautiful user experiences with focus on accessibility, usability, and visual aesthetics.",
     icon: "palette",
   },
   {
-    id: "api",
-    title: "API Integration",
+    id: "api-dev",
+    title: "API Development",
     description:
-      "Robust REST API design, third-party integrations, and Supabase backends that scale with your product.",
+      "Building RESTful APIs and integrating third-party services for seamless data exchange and functionality.",
     icon: "plug",
   },
   {
-    id: "automation",
-    title: "Automation",
+    id: "ai-integration",
+    title: "AI Integration",
     description:
-      "Workflow automation, CI/CD pipelines, and AI-assisted development pipelines that accelerate delivery.",
+      "Implementing AI-powered features and machine learning models to enhance application intelligence and automation.",
+    icon: "sparkles",
+  },
+  {
+    id: "optimization",
+    title: "Website Optimization",
+    description:
+      "Improving website performance, SEO, and loading speeds for better user experience and search rankings.",
     icon: "zap",
+  },
+  {
+    id: "portfolio-dev",
+    title: "Portfolio Development",
+    description:
+      "Creating stunning personal portfolios and professional websites that showcase your work and skills effectively.",
+    icon: "briefcase",
   },
 ];

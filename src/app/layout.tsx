@@ -16,7 +16,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#6C3BFF",
+  themeColor: "#0080FF",
   width: "device-width",
   initialScale: 1,
 };
@@ -84,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <link rel="icon" href="/images/gabriel-logo-reference.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

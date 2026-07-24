@@ -10,7 +10,7 @@ export type Skill = {
   level: number;
 };
 
-export type ProjectCategory = "all" | "web" | "ai" | "fullstack";
+export type ProjectCategory = "all" | "frontend" | "fullstack" | "ai" | "mobile" | "ui-design";
 
 export type Project = {
   id: string;

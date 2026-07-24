@@ -28,7 +28,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       transition={{ duration: 0.4, delay: index * 0.05 }}
       className="group h-full"
     >
-      <GlassCard className="overflow-hidden h-full flex flex-col hover:border-purple-deep/30 transition-all duration-500 hover:glow-purple">
+      <GlassCard className="overflow-hidden h-full flex flex-col hover:border-cyan-deep/30 transition-all duration-500 hover:glow-cyan">
         <a
           href={project.live}
           target="_blank"
@@ -52,7 +52,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl font-bold text-white mb-2 group-hover:text-purple-neon transition-colors hover:underline"
+            className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors hover:underline"
           >
             {project.title}
           </a>
@@ -64,7 +64,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs rounded-md bg-purple-deep/10 text-purple-neon border border-purple-deep/20"
+                className="px-2.5 py-1 text-xs rounded-md bg-cyan-deep/10 text-cyan-400 border border-cyan-deep/20"
               >
                 {tech}
               </span>
@@ -77,7 +77,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl glass text-sm text-white/80 hover:text-white hover:border-purple-deep/40 transition-all"
+                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl glass text-sm text-white/80 hover:text-white hover:border-cyan-deep/40 transition-all"
                 aria-label={`View ${project.title} on GitHub`}
               >
                 <GitHubIcon className="w-4 h-4" />
@@ -89,7 +89,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-deep to-pink-neon text-sm text-white font-medium hover:shadow-[0_0_20px_rgba(108,59,255,0.4)] transition-shadow",
+                "inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-deep to-blue-ocean text-sm text-white font-medium hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-shadow",
                 project.github ? "flex-1" : "w-full"
               )}
               aria-label={`Open ${project.title} website`}
@@ -172,7 +172,7 @@ export function Projects() {
                 className={cn(
                   "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300",
                   activeCategory === cat.id
-                    ? "bg-gradient-to-r from-purple-deep to-pink-neon text-white glow-purple"
+                    ? "bg-gradient-to-r from-cyan-deep to-blue-ocean text-white glow-cyan"
                     : "glass text-white/60 hover:text-white"
                 )}
               >

@@ -3,22 +3,22 @@
 :root {
   --background: #050508;
   --foreground: #f0f0f5;
-  --purple-deep: #6c3bff;
-  --purple-neon: #a855f7;
-  --pink-neon: #ff4fd8;
-  --blue-subtle: #3b82f6;
+  --cyan-deep: #0080ff;
+  --cyan-neon: #00ffff;
+  --blue-ocean: #0040ff;
+  --blue-subtle: #0066cc;
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glow-purple: rgba(108, 59, 255, 0.4);
-  --glow-pink: rgba(255, 79, 216, 0.3);
+  --glow-cyan: rgba(0, 255, 255, 0.4);
+  --glow-blue: rgba(0, 128, 255, 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-purple-deep: var(--purple-deep);
-  --color-purple-neon: var(--purple-neon);
-  --color-pink-neon: var(--pink-neon);
+  --color-cyan-deep: var(--cyan-deep);
+  --color-cyan-neon: var(--cyan-neon);
+  --color-blue-ocean: var(--blue-ocean);
   --color-blue-subtle: var(--blue-subtle);
   --color-glass-bg: var(--glass-bg);
   --color-glass-border: var(--glass-border);
@@ -43,7 +43,7 @@ body {
 }
 
 ::selection {
-  background: rgba(108, 59, 255, 0.4);
+  background: rgba(0, 255, 255, 0.4);
   color: #fff;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--purple-deep), var(--pink-neon));
+  background: linear-gradient(180deg, var(--cyan-deep), var(--blue-ocean));
   border-radius: 4px;
 }
 
@@ -81,32 +81,32 @@ body {
   background: linear-gradient(
     135deg,
     #fff 0%,
-    var(--purple-neon) 40%,
-    var(--pink-neon) 100%
+    var(--cyan-neon) 40%,
+    var(--blue-ocean) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-purple {
-  background: linear-gradient(135deg, var(--purple-deep), var(--pink-neon));
+.gradient-text-cyan {
+  background: linear-gradient(135deg, var(--cyan-deep), var(--blue-ocean));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* Glow effects */
-.glow-purple {
+.glow-cyan {
   box-shadow:
-    0 0 20px var(--glow-purple),
-    0 0 60px rgba(108, 59, 255, 0.15);
+    0 0 20px var(--glow-cyan),
+    0 0 60px rgba(0, 255, 255, 0.15);
 }
 
-.glow-pink {
+.glow-blue {
   box-shadow:
-    0 0 20px var(--glow-pink),
-    0 0 60px rgba(255, 79, 216, 0.1);
+    0 0 20px var(--glow-blue),
+    0 0 60px rgba(0, 128, 255, 0.1);
 }
 
 .neon-border {
@@ -186,6 +186,101 @@ body {
 
 .animate-page-in {
   animation: page-in 0.2s ease-out forwards;
+}
+
+/* Hero brand logo */
+.logo-badge-glow {
+  background: radial-gradient(
+    circle,
+    rgba(255, 120, 80, 0.22) 0%,
+    rgba(77, 150, 255, 0.16) 35%,
+    rgba(199, 125, 255, 0.12) 55%,
+    transparent 72%
+  );
+  animation: logo-glow-pulse 3.5s ease-in-out infinite;
+}
+
+.logo-badge-spin {
+  animation: logo-spin 22s linear infinite;
+}
+
+.logo-badge-shine {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 300deg,
+    rgba(255, 255, 255, 0.05) 318deg,
+    rgba(255, 217, 61, 0.55) 330deg,
+    rgba(255, 159, 67, 0.75) 338deg,
+    rgba(255, 77, 77, 0.85) 344deg,
+    rgba(107, 203, 119, 0.75) 350deg,
+    rgba(77, 150, 255, 0.8) 356deg,
+    rgba(199, 125, 255, 0.65) 360deg
+  );
+  mix-blend-mode: screen;
+  animation: logo-shine-spin 4.5s linear infinite;
+  opacity: 0.85;
+}
+
+.logo-badge-shimmer {
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.08) 46%,
+    rgba(255, 217, 61, 0.45) 50%,
+    rgba(77, 150, 255, 0.4) 54%,
+    rgba(199, 125, 255, 0.35) 58%,
+    transparent 68%
+  );
+  background-size: 220% 100%;
+  mix-blend-mode: screen;
+  animation: logo-shimmer-sweep 2.8s ease-in-out infinite;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-shine-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logo-shimmer-sweep {
+  0%,
+  100% {
+    background-position: 180% 0;
+    opacity: 0.35;
+  }
+  45% {
+    background-position: -40% 0;
+    opacity: 0.95;
+  }
+  55% {
+    background-position: -60% 0;
+    opacity: 0.95;
+  }
+}
+
+@keyframes logo-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
 }
 
 /* Interactive feel */

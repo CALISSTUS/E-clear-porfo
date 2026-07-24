@@ -62,7 +62,7 @@ export function About() {
               </div>
 
               <h3 id="about-heading" className="text-2xl font-bold text-white mb-6">
-                Hi, I&apos;m {siteConfig.name}
+                Hello, I'm Gabriel Gabriel
               </h3>
 
               <div className="space-y-4 text-white/70 leading-relaxed">
@@ -79,7 +79,7 @@ export function About() {
                     prefetch
                     className="text-center group cursor-pointer hover:scale-105 transition-transform duration-150"
                   >
-                    <div className="text-2xl md:text-3xl font-bold gradient-text-purple group-hover:text-pink-neon transition-colors duration-150">
+                    <div className="text-2xl md:text-3xl font-bold gradient-text-cyan group-hover:text-cyan-400 transition-colors duration-150">
                       {stat.value}
                     </div>
                     <div className="text-xs md:text-sm text-white/50 mt-1 group-hover:text-white/70 transition-colors duration-150">

@@ -2,20 +2,22 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Code, Sparkles, Palette, Plug, Zap, Smartphone, TabletSmartphone, ArrowRight } from "lucide-react";
+import { Code, Sparkles, Palette, Plug, Zap, Layout, Server, Layers, Briefcase, ArrowRight } from "lucide-react";
 import { services } from "@/data/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 const iconMap = {
-  "tablet-smartphone": TabletSmartphone,
-  smartphone: Smartphone,
-  code: Code,
-  sparkles: Sparkles,
+  layout: Layout,
+  server: Server,
+  layers: Layers,
   palette: Palette,
   plug: Plug,
+  sparkles: Sparkles,
   zap: Zap,
+  briefcase: Briefcase,
+  code: Code,
 };
 
 export function Services() {
@@ -25,7 +27,7 @@ export function Services() {
       className="section-padding relative"
       aria-labelledby="services-heading"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,79,216,0.06)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(0,128,255,0.06)_0%,transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto relative">
         <SectionHeading
@@ -44,23 +46,23 @@ export function Services() {
                   prefetch
                   className="block h-full group cursor-pointer"
                 >
-                  <GlassCard className="p-8 h-full hover:border-pink-neon/40 transition-all duration-150 hover:glow-pink hover:-translate-y-1 active:scale-[0.99]">
+                  <GlassCard className="p-8 h-full hover:border-cyan-deep/40 transition-all duration-150 hover:glow-cyan hover:-translate-y-1 active:scale-[0.99]">
                     <div
-                      className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-deep to-pink-neon flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-150"
+                      className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-deep to-cyan-neon flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-150"
                       aria-hidden
                     >
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                     <h3
                       id={i === 0 ? "services-heading" : undefined}
-                      className="text-xl font-bold text-white mb-3 group-hover:text-pink-neon transition-colors duration-150"
+                      className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-150"
                     >
                       {service.title}
                     </h3>
                     <p className="text-white/60 leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-sm text-purple-neon font-medium opacity-70 group-hover:opacity-100 transition-opacity duration-150">
+                    <span className="inline-flex items-center gap-1 text-sm text-cyan-400 font-medium opacity-70 group-hover:opacity-100 transition-opacity duration-150">
                       Get started <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-150" />
                     </span>
                   </GlassCard>

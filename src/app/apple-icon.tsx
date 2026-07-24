@@ -1,9 +1,9 @@
 import { ImageResponse } from "next/og";
 
-export const size = { width: 32, height: 32 };
+export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-export default function Icon() {
+export default function AppleIcon() {
   return new ImageResponse(
     (
       <div
@@ -14,13 +14,13 @@ export default function Icon() {
           alignItems: "center",
           justifyContent: "center",
           background: "linear-gradient(135deg, #6C3BFF 0%, #A855F7 45%, #FF4FD8 100%)",
-          borderRadius: 7,
+          borderRadius: 40,
           color: "#FFFFFF",
-          fontSize: 11,
+          fontSize: 68,
           fontWeight: 800,
-          letterSpacing: 0.4,
-          textShadow: "0 1px 2px rgba(0, 0, 0, 0.45)",
-          border: "1px solid rgba(255, 255, 255, 0.35)",
+          letterSpacing: 2,
+          textShadow: "0 4px 12px rgba(0, 0, 0, 0.35)",
+          border: "3px solid rgba(255, 255, 255, 0.35)",
         }}
       >
         GTE

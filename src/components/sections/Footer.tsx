@@ -27,15 +27,15 @@ export function Footer() {
       className="relative pt-16 pb-8 overflow-hidden"
       role="contentinfo"
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-deep/10 via-background to-background" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-deep/10 rounded-full blur-[120px]" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-t from-cyan-deep/10 via-background to-background" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-deep/10 rounded-full blur-[120px]" aria-hidden />
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="text-2xl font-bold gradient-text-purple inline-block mb-4"
+              className="text-2xl font-bold gradient-text inline-block mb-4"
             >
               {"</>"} {siteConfig.name}
             </Link>
@@ -52,7 +52,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-white/50 hover:text-purple-neon transition-colors text-sm"
+                    className="text-white/50 hover:text-cyan-400 transition-colors text-sm"
                   >
                     {item.label}
                   </Link>
@@ -82,7 +82,7 @@ export function Footer() {
           <motion.button
             type="button"
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white flex items-center justify-center glow-purple"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-deep to-blue-ocean text-white flex items-center justify-center glow-cyan"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}

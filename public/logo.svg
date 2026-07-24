@@ -1,0 +1,46 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="16%" stop-color="#FF7F00"/>
+      <stop offset="33%" stop-color="#FFFF00"/>
+      <stop offset="50%" stop-color="#00FF00"/>
+      <stop offset="66%" stop-color="#0000FF"/>
+      <stop offset="83%" stop-color="#4B0082"/>
+      <stop offset="100%" stop-color="#9400D3"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFFF"/>
+      <stop offset="50%" stop-color="#0080FF"/>
+      <stop offset="100%" stop-color="#0040FF"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer circle with neon glow -->
+  <circle cx="100" cy="100" r="90" stroke="url(#rainbowGradient)" stroke-width="3" filter="url(#neonGlow)" opacity="0.9"/>
+  <circle cx="100" cy="100" r="85" stroke="url(#neonCyan)" stroke-width="1.5" filter="url(#strongGlow)" opacity="0.7"/>
+  
+  <!-- Top text: CALISSTUS -->
+  <text x="100" y="42" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="url(#rainbowGradient)" filter="url(#neonGlow)">CALISSTUS</text>
+  
+  <!-- Center text: GA -->
+  <text x="100" y="115" font-family="Arial, sans-serif" font-size="52" font-weight="bold" text-anchor="middle" fill="url(#rainbowGradient)" filter="url(#strongGlow)">GA</text>
+  
+  <!-- Bottom text: GABRIEL GABRIEL -->
+  <text x="100" y="168" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="url(#rainbowGradient)" filter="url(#neonGlow)">GABRIEL GABRIEL</text>
+</svg>

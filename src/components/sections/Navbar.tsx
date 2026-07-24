@@ -44,7 +44,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled || pathname !== "/"
-          ? "glass-strong py-3 shadow-lg shadow-purple-deep/5"
+          ? "glass-strong py-3 shadow-lg shadow-cyan-500/10 backdrop-blur-xl"
           : "py-5 bg-transparent"
       )}
       role="banner"
@@ -55,26 +55,28 @@ export function Navbar() {
       >
         <Link
           href="/"
-          prefetch
-          className="text-xl font-bold gradient-text-purple tracking-tight"
+          className="flex items-center gap-3 hover:scale-105 transition-transform duration-200"
           aria-label={`${siteConfig.name} - Home`}
         >
-          {"</>"}
-          <span className="text-white ml-1 text-sm md:text-base tracking-wide">
+          <img 
+            src="/logo.svg" 
+            alt="CALISSTUS Logo" 
+            className="w-10 h-10"
+          />
+          <span className="text-xl font-bold gradient-text tracking-tight">
             {siteConfig.name}
           </span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-1" role="list">
+        <ul className="hidden lg:flex items-center gap-1" role="list">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  prefetch
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-150",
+                    "relative px-3 py-2 text-sm font-medium rounded-full transition-all duration-200 hover:scale-105 active:scale-95",
                     active ? "text-white" : "text-white/60 hover:text-white"
                   )}
                   aria-current={active ? "page" : undefined}
@@ -82,7 +84,7 @@ export function Navbar() {
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 bg-purple-deep/20 border border-purple-deep/30 rounded-full"
+                      className="absolute inset-0 bg-cyan-500/20 border border-cyan-500/30 rounded-full"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -95,10 +97,9 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          prefetch
-          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white hover:shadow-[0_0_20px_rgba(108,59,255,0.4)] transition-all duration-150 active:scale-95"
+          className="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all duration-200 hover:scale-105 active:scale-95"
         >
-          Hire Me
+          Let's Talk
         </Link>
 
         <button
@@ -137,8 +138,8 @@ export function Navbar() {
                       href={item.href}
                       onClick={() => setIsMobileOpen(false)}
                       className={cn(
-                        "block px-6 py-3 text-lg font-medium rounded-xl transition-colors",
-                        active ? "text-purple-neon" : "text-white/70 hover:text-white"
+                        "block px-6 py-3 text-lg font-medium rounded-xl transition-all duration-200 hover:scale-105 hover:bg-cyan-500/10",
+                        active ? "text-cyan-400" : "text-white/70 hover:text-white"
                       )}
                       aria-current={active ? "page" : undefined}
                     >
@@ -156,9 +157,9 @@ export function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileOpen(false)}
-                  className="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-purple-deep to-pink-neon text-white font-medium"
+                  className="inline-flex px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium"
                 >
-                  Hire Me
+                  Let's Talk
                 </Link>
               </motion.li>
             </ul>

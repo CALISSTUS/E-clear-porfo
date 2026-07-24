@@ -126,7 +126,7 @@ export function Contact() {
   };
 
   const inputClasses =
-    "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:border-purple-deep/50 focus:bg-white/8 transition-all outline-none";
+    "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:border-cyan-deep/50 focus:bg-white/8 transition-all outline-none";
 
   return (
     <section
@@ -155,17 +155,17 @@ export function Contact() {
                 <div>
                   <p className="text-white/50 text-sm mb-2">Email</p>
                   <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-purple-neon shrink-0" aria-hidden />
+                    <Mail className="w-5 h-5 text-cyan-400 shrink-0" aria-hidden />
                     <a
                       href={`mailto:${siteConfig.email}`}
-                      className="text-white hover:text-purple-neon transition-colors break-all"
+                      className="text-white hover:text-cyan-400 transition-colors break-all"
                     >
                       {siteConfig.email}
                     </a>
                     <button
                       type="button"
                       onClick={copyEmail}
-                      className="p-2 rounded-lg glass hover:border-purple-deep/40 transition-colors shrink-0"
+                      className="p-2 rounded-lg glass hover:border-cyan-deep/40 transition-colors shrink-0"
                       aria-label={copied ? "Email copied" : "Copy email address"}
                     >
                       {copied ? (
@@ -199,7 +199,7 @@ export function Contact() {
                 <div className="grid sm:grid-cols-2 gap-5 mb-5">
                   <div>
                     <label htmlFor="name" className="block text-sm text-white/60 mb-2">
-                      Name <span className="text-pink-neon">*</span>
+                      Name <span className="text-cyan-400">*</span>
                     </label>
                     <input
                       id="name"
@@ -220,7 +220,7 @@ export function Contact() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm text-white/60 mb-2">
-                      Email <span className="text-pink-neon">*</span>
+                      Email <span className="text-cyan-400">*</span>
                     </label>
                     <input
                       id="email"
@@ -243,7 +243,7 @@ export function Contact() {
 
                 <div className="mb-5">
                   <label htmlFor="subject" className="block text-sm text-white/60 mb-2">
-                    Subject <span className="text-pink-neon">*</span>
+                    Subject <span className="text-cyan-400">*</span>
                   </label>
                   <input
                     id="subject"
@@ -265,7 +265,7 @@ export function Contact() {
 
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-sm text-white/60 mb-2">
-                    Message <span className="text-pink-neon">*</span>
+                    Message <span className="text-cyan-400">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -315,7 +315,7 @@ export function Contact() {
                     {submitError} — or email{" "}
                     <a
                       href={`mailto:${siteConfig.email}`}
-                      className="text-purple-neon underline"
+                      className="text-cyan-400 underline"
                     >
                       {siteConfig.email}
                     </a>{" "}

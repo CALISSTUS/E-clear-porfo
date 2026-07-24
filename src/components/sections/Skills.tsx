@@ -18,10 +18,10 @@ const categoryLabels = {
 };
 
 const categoryColors = {
-  frontend: "from-purple-deep to-purple-neon",
-  backend: "from-blue-subtle to-purple-deep",
-  tools: "from-pink-neon to-purple-deep",
-  design: "from-pink-neon to-blue-subtle",
+  frontend: "from-cyan-deep to-cyan-neon",
+  backend: "from-blue-subtle to-cyan-deep",
+  tools: "from-blue-ocean to-cyan-deep",
+  design: "from-cyan-neon to-blue-subtle",
 };
 
 function SkillBar({ name, level, category }: (typeof skills)[0]) {
@@ -70,7 +70,7 @@ export function Skills() {
       className="section-padding relative"
       aria-labelledby="skills-heading"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(108,59,255,0.08)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,255,255,0.08)_0%,transparent_50%)]" />
 
       <div className="max-w-7xl mx-auto relative">
         <SectionHeading
@@ -86,7 +86,7 @@ export function Skills() {
 
             return (
               <ScrollReveal key={category} delay={catIndex * 0.1}>
-                <GlassCard className="p-6 md:p-8 h-full hover:border-purple-deep/30 transition-colors duration-300">
+                <GlassCard className="p-6 md:p-8 h-full hover:border-cyan-deep/30 transition-colors duration-300">
                   <h3
                     id={catIndex === 0 ? "skills-heading" : undefined}
                     className="text-lg font-semibold text-white mb-6 flex items-center gap-3"
@@ -126,7 +126,7 @@ export function Skills() {
                 key={skill.name}
                 href="/contact"
                 prefetch
-                className="px-4 py-2 rounded-full glass text-sm text-white/70 hover:text-white hover:border-purple-deep/50 hover:glow-purple transition-all duration-150 cursor-pointer active:scale-95"
+                className="px-4 py-2 rounded-full glass text-sm text-white/70 hover:text-white hover:border-cyan-deep/50 hover:glow-cyan transition-all duration-150 cursor-pointer active:scale-95"
               >
                 {skill.name}
               </Link>
