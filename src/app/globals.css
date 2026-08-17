@@ -3,22 +3,22 @@
 :root {
   --background: #050508;
   --foreground: #f0f0f5;
-  --cyan-deep: #0080ff;
-  --cyan-neon: #00ffff;
-  --blue-ocean: #0040ff;
-  --blue-subtle: #0066cc;
+  --purple-deep: #6c3bff;
+  --purple-neon: #a855f7;
+  --pink-neon: #ff4fd8;
+  --blue-subtle: #3b82f6;
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glow-cyan: rgba(0, 255, 255, 0.4);
-  --glow-blue: rgba(0, 128, 255, 0.3);
+  --glow-purple: rgba(108, 59, 255, 0.4);
+  --glow-pink: rgba(255, 79, 216, 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-cyan-deep: var(--cyan-deep);
-  --color-cyan-neon: var(--cyan-neon);
-  --color-blue-ocean: var(--blue-ocean);
+  --color-purple-deep: var(--purple-deep);
+  --color-purple-neon: var(--purple-neon);
+  --color-pink-neon: var(--pink-neon);
   --color-blue-subtle: var(--blue-subtle);
   --color-glass-bg: var(--glass-bg);
   --color-glass-border: var(--glass-border);
@@ -43,7 +43,7 @@ body {
 }
 
 ::selection {
-  background: rgba(0, 255, 255, 0.4);
+  background: rgba(108, 59, 255, 0.4);
   color: #fff;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--cyan-deep), var(--blue-ocean));
+  background: linear-gradient(180deg, var(--purple-deep), var(--pink-neon));
   border-radius: 4px;
 }
 
@@ -81,32 +81,32 @@ body {
   background: linear-gradient(
     135deg,
     #fff 0%,
-    var(--cyan-neon) 40%,
-    var(--blue-ocean) 100%
+    var(--purple-neon) 40%,
+    var(--pink-neon) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-cyan {
-  background: linear-gradient(135deg, var(--cyan-deep), var(--blue-ocean));
+.gradient-text-purple {
+  background: linear-gradient(135deg, var(--purple-deep), var(--pink-neon));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* Glow effects */
-.glow-cyan {
+.glow-purple {
   box-shadow:
-    0 0 20px var(--glow-cyan),
-    0 0 60px rgba(0, 255, 255, 0.15);
+    0 0 20px var(--glow-purple),
+    0 0 60px rgba(108, 59, 255, 0.15);
 }
 
-.glow-blue {
+.glow-pink {
   box-shadow:
-    0 0 20px var(--glow-blue),
-    0 0 60px rgba(0, 128, 255, 0.1);
+    0 0 20px var(--glow-pink),
+    0 0 60px rgba(255, 79, 216, 0.1);
 }
 
 .neon-border {

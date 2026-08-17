@@ -52,16 +52,16 @@ function Earth() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return new THREE.CanvasTexture(canvas);
 
-    // Deep blue ocean base
+    // Navy blue ocean base
     const gradient = ctx.createLinearGradient(0, 0, 0, 512);
-    gradient.addColorStop(0, '#001a33');
-    gradient.addColorStop(0.5, '#003366');
-    gradient.addColorStop(1, '#001a33');
+    gradient.addColorStop(0, '#000050');
+    gradient.addColorStop(0.5, '#000080');
+    gradient.addColorStop(1, '#000050');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, 1024, 512);
 
-    // Add glowing continents (simplified)
-    ctx.fillStyle = '#00ff88';
+    // Add glowing continents (simplified) with navy blue color
+    ctx.fillStyle = '#1a1a80';
     ctx.globalAlpha = 0.6;
     
     // Draw some continent-like shapes
@@ -79,9 +79,9 @@ function Earth() {
       ctx.fill();
     });
 
-    // Add glow effect
+    // Add glow effect with navy blue color
     ctx.globalAlpha = 0.3;
-    ctx.shadowColor = '#00ffff';
+    ctx.shadowColor = '#1a1a80';
     ctx.shadowBlur = 20;
     continents.forEach(cont => {
       ctx.beginPath();

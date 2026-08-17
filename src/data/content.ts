@@ -1,9 +1,9 @@
 import type { NavItem, Service, SocialLink } from "@/types";
 
 export const siteConfig = {
-  name: "CALISSTUS",
-  title: "Creative Developer & Full-Stack Engineer",
-  tagline: "Building fast, beautiful, scalable digital experiences",
+  name: "GABRIEL CALISSTUS GABRIEL",
+  title: "Backend Frontend Engineer Full-Stack Developer",
+  tagline: "Building digital experience that matter's with modern technologies web solutions for Business",
   email: "gabrielgabriel9727@gmail.com",
   location: "Remote · Worldwide",
   availability: "Open to freelance & full-time",
